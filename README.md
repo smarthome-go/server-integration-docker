@@ -15,10 +15,10 @@ cd smarthome
 
 # Run following command AFTER the image has been built
 # This will start the integration tests using a local version of the code
-docker run \
+docker run -it \
   --rm \
-  -vit \
-  $(pwd):/opt/smarthome/tests \
-  smarthome-go/smarthome-integrations:latest
+  --name smarthome-server-integration-tests \
+  -v $(pwd):/opt/smarthome/tests \
+  server-integration-docker:latest
 ```
 
