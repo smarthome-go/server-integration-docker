@@ -35,13 +35,8 @@ run_integration_tests () {
 
     # Run the actual tests
     echo "Running integration tests..."
-    mkdir -p web/dist/html
-    touch web/dist/html/testing.html
-    # Prevents server panic
-
-    go test -v -p 1 ./... --timeout=10000s
-    # Tests should be run one after another due to deletion of the database at every test start
-    rm -rf web/dist/html/testing.html
+    # Use local Makefile
+    make test || exit 99
 }
 
 
