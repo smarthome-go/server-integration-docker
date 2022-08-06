@@ -3,7 +3,7 @@ A docker image for running the server's integration test in a reproducible manne
 
 ## Building the Image
 ```bash
-docker build -t server-integration-docker:latest .
+make docker
 ```
 
 ## Running locally
@@ -19,6 +19,5 @@ docker run -it \
   --rm \
   --name smarthome-server-integration-tests \
   -v $(pwd):/opt/smarthome/tests \
-  server-integration-docker:latest
+  mikmuellerdev/smarthome-integration-test
 ```
-
