@@ -1,5 +1,5 @@
 repository := mikmuellerdev/smarthome-integration-test
-tag := 0.1.0
+tag := 0.2.0
 
 docker:
 	docker build \
